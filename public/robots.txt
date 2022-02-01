@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /Blog/Technology/Single_Blog_Post/9-Tips-And-Tricks-To-Learn-Programming-Faster

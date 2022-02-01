@@ -1,0 +1,26 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://technicalknowledge.herokuapp.com/</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+<loc>https://technicalknowledge.herokuapp.com/About</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+<loc>https://technicalknowledge.herokuapp.com/Contact</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+<loc>https://technicalknowledge.herokuapp.com/Blog/Technology</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+<loc>https://technicalknowledge.herokuapp.com/Searchblog/Mohd%20Ahasan%20Khan</loc>
+<changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://technicalknowledge.herokuapp.com/Singleblog/9-Tips-And-Tricks-To-Learn-Programming-Faster</loc>
+<changefreq>daily</changefreq>
+</url>
+</urlset>
