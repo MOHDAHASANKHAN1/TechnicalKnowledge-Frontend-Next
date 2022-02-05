@@ -134,7 +134,7 @@ a {
 
 /*learmoreabout_css_start*/
 .learn {
-    width: 1400px;
+    width: 100%;
     height: 400px;
     background-image: url('/tea.jpeg');
     background-size: cover;
@@ -152,7 +152,7 @@ a {
 
 /*newsletter_css_start*/
 .lear {
-    width: 1400px;
+    width: 100%;
     height: 400px;
     background-image: url("/messagese.jpeg");
     background-size: cover;
