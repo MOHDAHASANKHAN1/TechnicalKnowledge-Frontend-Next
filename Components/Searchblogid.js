@@ -383,6 +383,24 @@ const Searchbyid = (props) => {
                                 }}
                               />
                             </div>
+                            <div className="mb-3 col-sm-3">
+                              <label>Select The Category<span className="text-danger">*</span></label>
+                              <br />
+                              <select onChange={(e) => setCategory(e.target.value)}>
+                                {optionscategory.map((option) => (
+                                  <option value={option.value} key={1} >{option.label}</option>
+                                ))}
+                              </select>
+                            </div>
+                            <div className="mb-3 col-sm-3">
+                              <label>Select The Showing Position<span className="text-danger">*</span></label>
+                              <br />
+                              <select onChange={(e) => setShowposition(e.target.value)}>
+                                {optionsshow.map((option) => (
+                                  <option value={option.value} key={1} >{option.label}</option>
+                                ))}
+                              </select>
+                            </div>
                             <div className="mb-3 col-sm-6">
                               <label>PathName<span className="text-danger">*</span></label>
                               <input type="text" className="form-control" required
@@ -391,11 +409,11 @@ const Searchbyid = (props) => {
                                 onChange={(e) => setPathnames(e.target.value)}
                               />
                             </div>
-                            <div className="mb-3 col-sm-6">
-                              <label>Keywords<span className="text-danger">*</span></label>
-                              <input type="text" className="form-control" required
-                                placeholder='Enter All The Keywords'
-                                value={keywords}
+                            <div className="mb-3 col-sm-12">
+                              <label>Keywords Separated By Comma<span className="text-danger">*</span></label>
+                              <textarea rows="9" value={keywords} className="form-control" required
+                                placeholder="Enter Keywords Separated By Comma"
+
                                 onChange={((e) => {
                                   const str = e.target.value;
                                   const arr = str.split(" ");
@@ -405,32 +423,13 @@ const Searchbyid = (props) => {
                                   }
                                   const str2 = arr.join(" ");
                                   setKeywords(str2);
-                                })} />
+                                })}>
+                              </textarea>
                             </div>
-
-                            <div className="mb-3 col-sm-6">
-                              <label>Select The Category<span className="text-danger">*</span></label>
-                              <br />
-                              <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                                {optionscategory.map((option) => (
-                                  <option value={option.value} key={1} >{option.label}</option>
-                                ))}
-                              </select>
-                            </div>
-                            <div className="mb-3 col-sm-6">
-                              <label>Select The Showing Position<span className="text-danger">*</span></label>
-                              <br />
-                              <select value={showposition} onChange={(e) => setShowposition(e.target.value)}>
-                                {optionsshow.map((option) => (
-                                  <option value={option.value} key={1} >{option.label}</option>
-                                ))}
-                              </select>
-                            </div>
-
                             <div className="mb-3 col-sm-12">
                               <label>Blog Short Description<span className="text-danger">*</span></label>
 
-                              <textarea rows="3" value={shortdescription} className="form-control" required
+                              <textarea rows="6" value={shortdescription} className="form-control" required
                                 placeholder="Enter Course Description"
 
                                 onChange={((e) => {
@@ -448,7 +447,7 @@ const Searchbyid = (props) => {
                             <div className="mb-3 col-sm-12">
                               <label>Blog First Long Description<span className="text-danger">*</span></label>
 
-                              <textarea rows="9" value={firstdescription} className="form-control" required
+                              <textarea rows="15" value={firstdescription} className="form-control" required
                                 placeholder="Blog First Long Descriptions"
 
                                 onChange={((e) => {
@@ -467,7 +466,7 @@ const Searchbyid = (props) => {
                             <div className="mb-3 col-sm-12">
                               <label>Blog Second Long Description<span className="text-danger">*</span></label>
 
-                              <textarea rows="9" value={seconddescription} className="form-control" required
+                              <textarea rows="15" value={seconddescription} className="form-control" required
                                 placeholder="Blog Second Long Description"
 
                                 onChange={((e) => {
@@ -486,7 +485,7 @@ const Searchbyid = (props) => {
                             <div className="mb-3 col-sm-12">
                               <label>Blog Third Long Description<span className="text-danger">*</span></label>
 
-                              <textarea rows="9" value={thirddescription} className="form-control" required
+                              <textarea rows="15" value={thirddescription} className="form-control" required
                                 placeholder="Blog Third Long Description"
 
                                 onChange={((e) => {
