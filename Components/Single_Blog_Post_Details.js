@@ -3,11 +3,10 @@ import BPSCQ from './Blog_Posts_share_comment_Question';
 import Parser from 'react-html-parser';
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { useRouter } from 'next/router';
 
 const Blog_Post = (props) => {
   const data = props.Detailes;
-
-  const User = useSelector((state) => state.User_Admin_Profile.User);
   const Admin = useSelector((state) => state.User_Admin_Profile.Admin);
 
   //start Blogs variable
@@ -26,6 +25,9 @@ const Blog_Post = (props) => {
   const [keywords, setKeywords] = useState('');
   const [date, setDate] = useState('');
   const [upid, setUpid] = useState('');
+  const [upfirstimgid, setUpfirstimgid] = useState('');
+  const [upsecondimgid, setUpsecondimgid] = useState('');
+  const [upthirdimgid, setUpthirdimgid] = useState('');
   //end Blogs variable
 
   const optionscategory = [
@@ -199,6 +201,9 @@ const Blog_Post = (props) => {
     data.append("thirddescription", thirddescription);
     data.append("writer", writer);
     data.append("date", date);
+    data.append("firstimgid", upfirstimgid);
+    data.append("secondimgid", upsecondimgid);
+    data.append("thirdimgid", upthirdimgid);
 
     axios
       .post('https://technicalknowledge-backends.herokuapp.com/Blogs/Update', data)
@@ -206,19 +211,21 @@ const Blog_Post = (props) => {
 
   }
 
-  function Delete(id, categ) {
-    const qdata = { _id: id }
+  const history = useRouter();
+
+  function Delete(id, categ, firstimgid, secondimgid, thirdimgid) {
+    const qdata = { _id: id, firstimgid: firstimgid, secondimgid: secondimgid, thirdimgid: thirdimgid }
     if (window.confirm("Do You Really Want To Delete This Post")) {
       axios.post('https://technicalknowledge-backends.herokuapp.com/Blogs/Delete', qdata)
         .then(res => {
           alert(res.data);
-          history(`/Blog/${categ}`)
+          history.push(`/Blog/${categ}`)
         }
         )
     }
   }
 
-  function Updateset(upid, tittle, pathnames, keywords, showposition, category, writer, date, shortdescription, firstdescription, seconddescription, thirddescription) {
+  function Updateset(upid, tittle, pathnames, keywords, showposition, category, writer, date, shortdescription, firstdescription, seconddescription, thirddescription, firstimgid, secondimgid, thirdimgid) {
     setUpid(upid);
     setTittle(tittle);
     setPathnames(pathnames);
@@ -231,6 +238,9 @@ const Blog_Post = (props) => {
     setFirstdescription(firstdescription);
     setSeconddescription(seconddescription);
     setThirddescription(thirddescription);
+    setUpfirstimgid(firstimgid);
+    setUpsecondimgid(secondimgid);
+    setUpthirdimgid(thirdimgid);
   }
 
   if (data !== null) {
@@ -251,10 +261,10 @@ const Blog_Post = (props) => {
                 <br />
                 <div className="row g-0">
                   <div className="col-sm-6 col-6 d-flex justify-content-center">
-                    <button data-bs-toggle="modal" data-bs-target="#updatec" className="btn-success px-3 py-1" onClick={() => Updateset(data._id, data.tittle, data.pathname, data.keywords, data.showposition, data.category, data.writer, data.date, data.shortdescription, data.firstdescription, data.seconddescription, data.thirddescription)}><i className="fas fa-pen px-1"></i> Edit</button>
+                    <button data-bs-toggle="modal" data-bs-target="#updatec" className="btn-success px-3 py-1" onClick={() => Updateset(data._id, data.tittle, data.pathname, data.keywords, data.showposition, data.category, data.writer, data.date, data.shortdescription, data.firstdescription, data.seconddescription, data.thirddescription, data.firstimgid, data.secondimgid, data.thirdimgid)}><i className="fas fa-pen px-1"></i> Edit</button>
                   </div>
                   <div className="col-sm-6 col-6 d-flex justify-content-center">
-                    <button className="btn-danger px-3 py-1" onClick={() => Delete(data._id, data.category)}><i className="fas px-1 fa-trash-alt"></i> Delete</button>
+                    <button className="btn-danger px-3 py-1" onClick={() => Delete(data._id, data.category, data.firstimgid, data.secondimgid, data.thirdimgid)}><i className="fas px-1 fa-trash-alt"></i> Delete</button>
                   </div>
                 </div>
                 <br />
