@@ -1,28 +1,38 @@
 import Link from 'next/link';
+import { useSelector, useDispatch } from "react-redux";
+import { Recent_Blogs_Details } from "../Redux/Action/Fech_Api.js";
+import { useEffect } from "react";
 
-export default function Recently_Publisheds(props) {
-  
+export default function Recently_Publisheds() {
+
+    const dispatch = useDispatch();
+    const Recent = useSelector((state) => state.Recent_Blogs_Details.RecentBlogs);
+
+    useEffect(() => {
+        dispatch(Recent_Blogs_Details())
+    }, []);
+
     return (
         <div>
-            <hr class="dropdown-divider bg-dark" />
-            <div class="container-fluid">
-                <div class="bbox">
-                    <h1 class="bbox"><u><b><i>Recently Published</i></b></u></h1>
+            <hr className="dropdown-divider bg-dark" />
+            <div className="container-fluid">
+                <div className="bbox">
+                    <h1 className="bbox"><u><b><i>Recently Published</i></b></u></h1>
                 </div>
-                <div class="row g-2">
+                <div className="row g-2">
                     {
-                      props.Recent.map((data) =>
-                      <div class="col-sm-6">
-                       <Link href={`/Singleblog/${data.pathname}`} class="nav-link">
-                        <div class="card"><img src={data.firstimage} class="card-img-top" alt={data.tittle} />
-                            <div class="card-body">
-                                <h5 class="card-title text-center">{data.tittle}</h5>
-                                <p class="card-text text-dark text-center">{data.shortdescription}</p>
+                        Recent.map((data) =>
+                            <div className="col-sm-6" key={1}>
+                                <Link passHref href={`/Singleblog/${data.pathname}`} className="nav-link">
+                                    <div className="card"><img src={data.firstimage} className="card-img-top" alt={data.tittle} />
+                                        <div className="card-body">
+                                            <h5 className="card-title text-center">{data.tittle}</h5>
+                                            <p className="card-text text-dark text-center">{data.shortdescription}</p>
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
-                        </div>
-                        </Link>
-                    </div>
-                      )
+                        )
                     }
                 </div>
             </div>

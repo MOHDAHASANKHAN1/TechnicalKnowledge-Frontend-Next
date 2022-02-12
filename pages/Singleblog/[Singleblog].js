@@ -3,49 +3,44 @@ import SingleBlogPostDetails from '../../Components/Single_Blog_Post_Details';
 import BlogBase from '../../Components/BlogBase';
 import Head from '../../Components/Headm';
 
-export default function SingleBlog({Recent, Populer, Post}) {
+export default function SingleBlog({ Post }) {
 
-const Heads = () => {
-  if (Post !== null) {
-    return(
-      <>
-      <Head 
-          tittle={Post.tittle}
-          description={ Post.tittle + " " + Post.shortdescription}
-          keywords={Post.keywords}
-      />
-      </>
-      );
-  } else {
-    return(
-      <>
-      </>
-      );
-  }
-}
-    return (
+  const Heads = () => {
+    if (Post !== null) {
+      return (
         <>
-        <Heads/>
-        <BlogBase Populer={Populer} Recent={Recent} Component={SingleBlogPostDetails} Detailes={Post} />
+          <Head
+            tittle={Post.tittle}
+            description={Post.shortdescription + " " + Post.tittle}
+            keywords={Post.keywords}
+          />
         </>
-    );
+      );
+    } else {
+      return (
+        <>
+        </>
+      );
+    }
+  }
+  return (
+    <>
+      <Heads />
+      <BlogBase Component={SingleBlogPostDetails} Detailes={Post} />
+    </>
+  );
 }
 
-export async function getServerSideProps(context){
-  const Populer = await 
-        axios.get("https://technicalknowledge-backends.herokuapp.com/Blogs/Read/Populer");
-  const Recent = await 
-        axios.get("https://technicalknowledge-backends.herokuapp.com/Blogs/Read/Recent");
+export async function getServerSideProps(context) {
+
   const pathname = context.params.Singleblog;
   const pdata = {
-  pathname: pathname
+    pathname: pathname
   }
-  const Post = await 
-        axios.post("https://technicalknowledge-backends.herokuapp.com/Blogs/Read/Single", pdata);
-  return{
+  const Post = await
+    axios.post("https://technicalknowledge-backends.herokuapp.com/Blogs/Read/Single", pdata);
+  return {
     props: {
-      Recent: Recent.data.Blogs,
-      Populer: Populer.data.Blogs,
       Post: Post.data.info || null
     }
   }

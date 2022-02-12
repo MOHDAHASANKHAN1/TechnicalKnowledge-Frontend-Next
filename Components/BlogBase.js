@@ -1,51 +1,62 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Router, {useRouter} from 'next/router';
+import Router, { useRouter } from 'next/router';
 import Loader from './Loader';
+import { useSelector, useDispatch } from "react-redux";
+import { Recent_Blogs_Details, Populer_Blogs_Details } from "../Redux/Action/Fech_Api.js";
+import { useEffect } from "react";
 
 const Loding = (props) => {
-  const [loading, setLoading] = useState(true);
-  const Component = props.Component;
-  const Detailes = props.Detailes;
-  
-  Router.onRouteChangeStart = url => {
-    setLoading(false);
-  }
-  Router.onRouteChangeComplete = url => {
-    setLoading(true);
-  }
-    
-  if (loading) {
-    return(
-      <>
-      <Component Detailes={Detailes}/>
-      </>
-      );
-  } else {
-    return(
-      <>
-        <Loader/>
-      </>
-      );
-  }
+    const [loading, setLoading] = useState(true);
+    const Component = props.Component;
+    const Detailes = props.Detailes;
+
+    Router.onRouteChangeStart = url => {
+        setLoading(false);
+    }
+    Router.onRouteChangeComplete = url => {
+        setLoading(true);
+    }
+
+    if (loading) {
+        return (
+            <>
+                <Component Detailes={Detailes} />
+            </>
+        );
+    } else {
+        return (
+            <>
+                <Loader />
+            </>
+        );
+    }
 }
 
-export default function (props) {
-  const Component = props.Component;
-  const Populer = props.Populer;
-  const Recent = props.Recent;
-  const Detailes = props.Detailes;
-  const history = useRouter();
-  
-  const [search, setSearch] = useState('');
-  function Search(){
-    if (search === '') {
-      alert("Please Enter Any Thing In Search Box");
-    } else {
-      history.push(`/Searchblog/${search}`);
+function BlogBase(props) {
+    const Components = props.Component;
+    const Detailes = props.Detailes;
+
+    const dispatch = useDispatch();
+    const Populer = useSelector((state) => state.Populer_Blogs_Details.PopulerBlogs);
+    const Recent = useSelector((state) => state.Recent_Blogs_Details.RecentBlogs);
+
+    useEffect(() => {
+        dispatch(Populer_Blogs_Details());
+        dispatch(Recent_Blogs_Details());
+    }, []);
+
+    const history = useRouter();
+
+    const [search, setSearch] = useState('');
+    function Search() {
+        if (search === '') {
+            alert("Please Enter Any Thing In Search Box");
+        } else {
+            history.push(`/Searchblog/${search}`);
+        }
     }
-  }
-  
+
     return (
         <>
             <div className='container-fluid'>
@@ -56,7 +67,7 @@ export default function (props) {
 
                 <div className='row gx-2'>
                     <div className='col-sm-8'>
-                    <Loding Component={Component} Detailes={Detailes}/>
+                        <Loding Component={Components} Detailes={Detailes} />
                     </div>
 
                     <div className='col-sm-4'>
@@ -65,18 +76,18 @@ export default function (props) {
                             <div>
                                 <div className="my-3  p-3 d-flex">
                                     <input className="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search" value={search} 
-                    onChange={((e) => {
-                                                            const str = e.target.value;
-                                                            const arr = str.split(" ");
-                                                            for (var i = 0; i < arr.length; i++) {
-                                                                arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+                                        aria-label="Search" value={search}
+                                        onChange={((e) => {
+                                            const str = e.target.value;
+                                            const arr = str.split(" ");
+                                            for (var i = 0; i < arr.length; i++) {
+                                                arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
 
-                                                            }
-                                                            const str2 = arr.join(" ");
-                                                            setSearch(str2);
-                                                        })}             /><i className="fas fa-search p-2" onClick={() => Search()}></i>
-          </div>
+                                            }
+                                            const str2 = arr.join(" ");
+                                            setSearch(str2);
+                                        })} /><i className="fas fa-search p-2" onClick={() => Search()}></i>
+                                </div>
                             </div>
                         </div>
 
@@ -85,46 +96,46 @@ export default function (props) {
                                 <div className="p-3">
                                     <h2 className='text-center'><b>Popular Posts</b></h2>
                                     <br />
-                    {
-                      Populer.map((data) => 
-                      <Link href={`/Singleblog/${data.pathname}`}  key={data._id}>
-                      <a >
-                      <div className="boxes p-3">
-                                            <img src={data.firstimage} className="img-fluid" alt={data.tittle} />
-                                            <div className="texts">
-                                                <p className='text-center'>{data.tittle}</p>
-                                            </div>
-                                        </div>
-                                           <hr className="dropdown-divider bg-dark" />
-                      </a> 
-                                    </Link>
-                                    
-                      )
-                    }
+                                    {
+                                        Populer.map((data) =>
+                                            <Link passHref href={`/Singleblog/${data.pathname}`} key={data._id}>
+                                                <a >
+                                                    <div className="boxes p-3">
+                                                        <img src={data.firstimage} className="img-fluid" alt={data.tittle} />
+                                                        <div className="texts">
+                                                            <p className='text-center'>{data.tittle}</p>
+                                                        </div>
+                                                    </div>
+                                                    <hr className="dropdown-divider bg-dark" />
+                                                </a>
+                                            </Link>
+
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className='right_side_info mt-4'>
                             <div>
                                 <div className="p-3">
                                     <h2 className='text-center'><b>Recent Posts</b></h2>
                                     <br />
-                    {
-                      Recent.map((data) => 
-                      <Link href={`/Singleblog/${data.pathname}`}  key={data._id}>
-                    <a><div className="boxes p-3">
-                                            <img src={data.firstimage} className="img-fluid" alt={data.tittle} />
-                                            <div className="texts">
-                                                <p className='text-center'>{data.tittle}</p>
-                                            </div>
-                                        </div>
-                                           <hr className="dropdown-divider bg-dark" /> 
-                     </a>
-                                   </Link>
-                                          
-                      )
-                    }
+                                    {
+                                        Recent.map((data) =>
+                                            <Link passHref href={`/Singleblog/${data.pathname}`} key={data._id}>
+                                                <a><div className="boxes p-3">
+                                                    <img src={data.firstimage} className="img-fluid" alt={data.tittle} />
+                                                    <div className="texts">
+                                                        <p className='text-center'>{data.tittle}</p>
+                                                    </div>
+                                                </div>
+                                                    <hr className="dropdown-divider bg-dark" />
+                                                </a>
+                                            </Link>
+
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -133,34 +144,34 @@ export default function (props) {
                             <div>
                                 <div className="py-4 px-5">
                                     <h2 className='text-dark'><b>Topics</b></h2>
-                                    <Link href="/Blog/Technology" className='nav-link px-0'><h5 className='topics'>Technology(20)</h5></Link>
-                                    <Link href="/Blog/Science" className='nav-link px-0'><h5 className='topics'>Science(10)</h5></Link>
-                                    <Link href="/Blog/Health" className='nav-link px-0'><h5 className='topics'>Health(13)</h5></Link>
-                                  <Link href="/Blog/Finance" className='nav-link px-0'><h5 className='topics'>Finance(16)</h5></Link>
-                                    <Link href="/Blog/Lifestyle" className='nav-link px-0'><h5 className='topics'>LifeStyle(6)</h5></Link>
-                                    <Link href="/Blog/Travel" className='nav-link px-0'><h5 className='topics'>Travel(3)</h5></Link>
-                                    <Link href="/Blog/Design" className='nav-link px-0'><h5 className='topics'>Design(7)</h5></Link>
-                                    <Link href="/Blog/Culture" className='nav-link px-0'><h5 className='topics'>Culture(9)</h5></Link>
-                                    <Link href="/Blog/Bussiness" className='nav-link px-0'><h5 className='topics'>Bussiness(8)</h5></Link>
-                                    <Link href="/Blog/Politics" className='nav-link px-0'><h5 className='topics'>Politics(2)</h5></Link>
-                                    <Link href="/Blog/Opinion" className='nav-link px-0'><h5 className='topics'>Opinion(5)</h5></Link>
-                                    <Link href="/Blog/World" className='nav-link px-0'><h5 className='topics'>World(2)</h5></Link>
-                                    <Link href="/Blog/U.s." className='nav-link px-0'><h5 className='topics'>U.s.(2)</h5></Link>
-                                    <Link href="/Blog/Social-Media" className='nav-link px-0'><h5 className='topics'>Social Medea(15)</h5></Link>
-                                    <Link href="/Blog/Bloging" className='nav-link px-0'><h5 className='topics'>Bloging(9)</h5></Link>
-                                    <Link href="/Blog/Digital-Marketing" className='nav-link px-0'><h5 className='topics'>Digital Marketing(11)</h5></Link>
-                                    <Link href="/Blog/Money-Making" className='nav-link px-0'><h5 className='topics'>Money Making(9)</h5></Link>
-                                    <Link href="/Blog/Bitcoin" className='nav-link px-0'><h5 className='topics'>Bitcoin(6)</h5></Link>
-                                    <Link href="/Blog/Entrepreneurship-&-Startup" className='nav-link px-0'><h5 className='topics'>Entrepreneurship & Startup(3)</h5></Link>
-                                    <Link href="/Blog/Freelancing" className='nav-link px-0'><h5 className='topics'>Freelancing(2)</h5></Link>
-                                    <Link href="/Blog/Companies" className='nav-link px-0'><h5 className='topics'>Companies(8)</h5></Link>
-                                    <Link href="/Blog/Marketing-hrefols" className='nav-link px-0'><h5 className='topics'>Marketing hrefols(3)</h5></Link>
-                                    <Link href="/Blog/Sports" className='nav-link px-0'><h5 className='topics'>Sports(8)</h5></Link>
-                                    <Link href="/Blog/Phohrefgraphy" className='nav-link px-0'><h5 className='topics'>Phohrefgraphy(5)</h5></Link>
-                                    <Link href="/Blog/Eco-hrefurism" className='nav-link px-0'><h5 className='topics'>Eco-hrefurism(2)</h5></Link>
-                                    <Link href="/Blog/Windsurfing" className='nav-link px-0'><h5 className='topics'>Windsurfing(6)</h5></Link>
-                                    <Link href="/Blog/Videography" className='nav-link px-0'><h5 className='topics'>Videography(8)</h5></Link>
-                                    <Link href="/Blog/Funny-Stories" className='nav-link px-0'><h5 className='topics'>Funny Stories(15)</h5></Link>
+                                    <Link passHref href="/Blog/Technology" className='nav-link px-0'><h5 className='topics'>Technology(20)</h5></Link>
+                                    <Link passHref href="/Blog/Science" className='nav-link px-0'><h5 className='topics'>Science(10)</h5></Link>
+                                    <Link passHref href="/Blog/Health" className='nav-link px-0'><h5 className='topics'>Health(13)</h5></Link>
+                                    <Link passHref href="/Blog/Finance" className='nav-link px-0'><h5 className='topics'>Finance(16)</h5></Link>
+                                    <Link passHref href="/Blog/Lifestyle" className='nav-link px-0'><h5 className='topics'>LifeStyle(6)</h5></Link>
+                                    <Link passHref href="/Blog/Travel" className='nav-link px-0'><h5 className='topics'>Travel(3)</h5></Link>
+                                    <Link passHref href="/Blog/Design" className='nav-link px-0'><h5 className='topics'>Design(7)</h5></Link>
+                                    <Link passHref href="/Blog/Culture" className='nav-link px-0'><h5 className='topics'>Culture(9)</h5></Link>
+                                    <Link passHref href="/Blog/Bussiness" className='nav-link px-0'><h5 className='topics'>Bussiness(8)</h5></Link>
+                                    <Link passHref href="/Blog/Politics" className='nav-link px-0'><h5 className='topics'>Politics(2)</h5></Link>
+                                    <Link passHref href="/Blog/Opinion" className='nav-link px-0'><h5 className='topics'>Opinion(5)</h5></Link>
+                                    <Link passHref href="/Blog/World" className='nav-link px-0'><h5 className='topics'>World(2)</h5></Link>
+                                    <Link passHref href="/Blog/U.s." className='nav-link px-0'><h5 className='topics'>U.s.(2)</h5></Link>
+                                    <Link passHref href="/Blog/Social-Media" className='nav-link px-0'><h5 className='topics'>Social Medea(15)</h5></Link>
+                                    <Link passHref href="/Blog/Bloging" className='nav-link px-0'><h5 className='topics'>Bloging(9)</h5></Link>
+                                    <Link passHref href="/Blog/Digital-Marketing" className='nav-link px-0'><h5 className='topics'>Digital Marketing(11)</h5></Link>
+                                    <Link passHref href="/Blog/Money-Making" className='nav-link px-0'><h5 className='topics'>Money Making(9)</h5></Link>
+                                    <Link passHref href="/Blog/Bitcoin" className='nav-link px-0'><h5 className='topics'>Bitcoin(6)</h5></Link>
+                                    <Link passHref href="/Blog/Entrepreneurship-&-Startup" className='nav-link px-0'><h5 className='topics'>Entrepreneurship & Startup(3)</h5></Link>
+                                    <Link passHref href="/Blog/Freelancing" className='nav-link px-0'><h5 className='topics'>Freelancing(2)</h5></Link>
+                                    <Link passHref href="/Blog/Companies" className='nav-link px-0'><h5 className='topics'>Companies(8)</h5></Link>
+                                    <Link passHref href="/Blog/Marketing-hrefols" className='nav-link px-0'><h5 className='topics'>Marketing hrefols(3)</h5></Link>
+                                    <Link passHref href="/Blog/Sports" className='nav-link px-0'><h5 className='topics'>Sports(8)</h5></Link>
+                                    <Link passHref href="/Blog/Phohrefgraphy" className='nav-link px-0'><h5 className='topics'>Phohrefgraphy(5)</h5></Link>
+                                    <Link passHref href="/Blog/Eco-hrefurism" className='nav-link px-0'><h5 className='topics'>Eco-hrefurism(2)</h5></Link>
+                                    <Link passHref href="/Blog/Windsurfing" className='nav-link px-0'><h5 className='topics'>Windsurfing(6)</h5></Link>
+                                    <Link passHref href="/Blog/Videography" className='nav-link px-0'><h5 className='topics'>Videography(8)</h5></Link>
+                                    <Link passHref href="/Blog/Funny-Stories" className='nav-link px-0'><h5 className='topics'>Funny Stories(15)</h5></Link>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +205,7 @@ export default function (props) {
                                 </a>
                             </div>
                         </div>
-<div className="right_side_info mt-4">
+                        <div className="right_side_info mt-4">
                             <div>
                                 <div className="py-4 px-4">
                                     <h2><b>Follow Us</b></h2><br />
@@ -282,3 +293,5 @@ export default function (props) {
         </>
     );
 }
+
+export default BlogBase;

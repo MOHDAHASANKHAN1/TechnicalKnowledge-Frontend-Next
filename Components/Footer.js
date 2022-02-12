@@ -39,50 +39,50 @@ export default function Footer() {
 
   return (
     <div>
-      <footer class="footer">
-        <div class="main-content">
-          <div class="left box">
+      <footer className="footer">
+        <div className="main-content">
+          <div className="left box">
             <h2>About us</h2>
-            <div class="content mt-3">
+            <div className="content mt-3">
               <p>TechnicalKnowledge Blog is a website where you can learn about Technology, bussiness, culture, designing, word, politics, health, style, travel, and also about programming langueges its tutorial and related so on.</p>
-              <div class="social"><a href="https://www.facebook.com/profile.php?id=100043795833453"><span
-                class="fab fa-facebook-f"></span></a> <a href="https://twitter.com/MoAhsanKhan5"><span
-                  class="fab fa-twitter"></span></a> <a href="https://www.instagram.com/mo_ahsan_khan"><span
-                    class="fab fa-instagram"></span></a> <a href="/Blog" class="text-primary" onClick={() => alert("We Are Sorry Now Youtube Channel Are Not Available")} ><span class="fab fa-youtube"></span></a></div>
+              <div className="social"><a href="https://www.facebook.com/profile.php?id=100043795833453"><span
+                className="fab fa-facebook-f"></span></a> <a href="https://twitter.com/MoAhsanKhan5"><span
+                  className="fab fa-twitter"></span></a> <a href="https://www.instagram.com/mo_ahsan_khan"><span
+                    className="fab fa-instagram"></span></a> <a href="/Blog" className="text-primary" onClick={() => alert("We Are Sorry Now Youtube Channel Are Not Available")} ><span className="fab fa-youtube"></span></a></div>
             </div>
           </div>
-          <div class="center box">
+          <div className="center box">
             <h2>Address</h2>
-            <div class="content">
-              <div class="place"><span class="fas fa-map-marker-alt"></span> <span class="text">MohanlalGanj,
+            <div className="content">
+              <div className="place"><span className="fas fa-map-marker-alt"></span> <span className="text">MohanlalGanj,
                 Lucknow</span></div>
-              <div class="phone"><span class="fas fa-phone-alt"></span> <span
-                class="text">+91-9918423716</span></div>
-              <div class="email"><span class="fas fa-envelope"></span> <span
-                class="text">aimtahsankhan@gmail.</span></div>
+              <div className="phone"><span className="fas fa-phone-alt"></span> <span
+                className="text">+91-9918423716</span></div>
+              <div className="email"><span className="fas fa-envelope"></span> <span
+                className="text">aimtahsankhan@gmail.</span></div>
             </div>
           </div>
-          <div class="right box">
+          <div className="right box">
             <h2>Contact us</h2>
-            <div class="content">
+            <div className="content">
               <form>
-                <div class="email">
-                  <div class="text text-primary">Email:*</div><input placeholder="Enter Your Email Here" className="bg-info" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <div className="email">
+                  <div className="text text-primary">Email:*</div><input placeholder="Enter Your Email Here" className="bg-info" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
-                <div class="msg">
-                  <div class="text text-primary">Message:*</div><input placeholder="Enter Your Message Here" className="bg-info" rows="2" cols="25" value={message} onChange={(e) => setMessage(e.target.value)} />
+                <div className="msg">
+                  <div className="text text-primary">Message:*</div><input placeholder="Enter Your Message Here" className="bg-info" rows="2" cols="25" value={message} onChange={(e) => setMessage(e.target.value)} />
                 </div>
-                <div class="d-grid gap-2">
-                  <button class="btn btn-danger" type="button" onClick={() => Submit()}>Send</button>
+                <div className="d-grid gap-2">
+                  <button className="btn btn-danger" type="button" onClick={() => Submit()}>Send</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        <hr class="dropdown-divider" />
-        <div class="bottom">
-          <center><span class="credit">Created By <a href="https://wa.me/+919918423716">Ahsan Khan</a> |</span>
-            <span class="far fa-copyright"></span><span>2021 All rights reserved.</span></center>
+        <hr className="dropdown-divider" />
+        <div className="bottom">
+          <center><span className="credit">Created By <a href="https://wa.me/+919918423716">Ahsan Khan</a> |</span>
+            <span className="far fa-copyright"></span><span>2021 All rights reserved.</span></center>
         </div>
       </footer>
     </div>
