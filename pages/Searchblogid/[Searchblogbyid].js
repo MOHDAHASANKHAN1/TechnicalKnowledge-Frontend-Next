@@ -13,6 +13,7 @@ export default function SingleBlog({ Searchbyid }) {
             tittle={Searchbyid.tittle}
             description={Searchbyid.shortdescription + " " + Searchbyid.tittle}
             keywords={Searchbyid.keywords}
+            imgurl={Searchbyid.firstimage}
           />
         </>
       );

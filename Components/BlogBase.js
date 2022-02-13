@@ -187,7 +187,7 @@ function BlogBase(props) {
                         </div>
                         <div className="right_side_info mt-4">
                             <div>
-                                <a href="https://www.facebook.com/profile.php?=100043795833453" className='nav-link'>
+                                <a href="https://www.facebook.com/people/Mo-Ahsan-Khan/100043795833453/" className='nav-link'>
                                     <div className="my-3 py-3 px-2">
                                         <h4 className='text-center'><b>Join Our Facebook</b></h4>
                                         <img src="/know2.jpg" className="img-fluid" alt="Technical Knowledge By Mohd Ahasan Khan"></img>
@@ -226,7 +226,7 @@ function BlogBase(props) {
                                                         className="ss-follow-network-count-number">4.5K</span> <span
                                                             className="ss-follow-network-count-label">Followers</span></span></p></div>
                                             <div className="ss-follow-column" data-ss-sf-network-id="&#34;facebook&#34;"><a
-                                                href="https://www.facebook.com/profile.php?id=100043795833453"
+                                                href="https://www.facebook.com/people/Mo-Ahsan-Khan/100043795833453/"
                                                 className="ss-follow-network ss-facebook-color" rel="nofollow noopener"
                                                 aria-label="facebook" ><span className="ss-follow-icon"><svg
                                                     className="ss-svg-icon" aria-hidden="true" role="img" focusable="false"

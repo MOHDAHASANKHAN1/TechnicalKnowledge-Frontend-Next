@@ -13,6 +13,7 @@ export default function SingleBlog({ Post }) {
             tittle={Post.tittle}
             description={Post.shortdescription + " " + Post.tittle}
             keywords={Post.keywords}
+            imgurl={Post.firstimage}
           />
         </>
       );
