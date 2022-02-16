@@ -205,10 +205,12 @@ function Post_Blog() {
         <div className="container-fluid py-2">
           <div className="row g-0">
             <div className="col-sm-12">
-              <form onSubmit={(e) => Post_Blog(e)} method="post" className=" border p-4 bg-light shadow">                    <div className="row g-0">     <div className="col-sm-12 d-flex justify-content-center">
-                <h4 className="mb-3 text-secondary">Add Blog Detailes And Post Blog</h4>
-              </div>
-              </div>
+              <form onSubmit={(e) => Post_Blog(e)} method="post" className=" border p-4 bg-light shadow">
+                <div className="row g-0">
+                  <div className="col-sm-12 d-flex justify-content-center">
+                    <h4 className="mb-3 text-secondary">Add Blog Detailes And Post Blog</h4>
+                  </div>
+                </div>
                 <div className="row">
                   <div className="mb-3 col-sm-6">
                     <label>Blog Tittle<span className="text-danger">*</span></label>
