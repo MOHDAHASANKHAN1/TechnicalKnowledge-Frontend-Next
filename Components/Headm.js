@@ -12,8 +12,6 @@ export default function Headm(props) {
         <link rel="sitemap" href="https://technicalknowledge.herokuapp.com/sitemap.xml" type="application/xml" />
         <link rel="icon" type="image/png" href="http://localhost:3000/Icon.png"></link>
         <meta name="description" content={props.description} />
-        <meta class="swiftype" name="doc-type" data-type="string" content="Technical Knowledge"></meta>
-        <meta class="swiftype" name="meta-description" data-type="text" content={props.keywords} />
         <meta name="keywords" content={props.keywords} />
         <meta property="article:tag" content={props.keywords} />
         <meta property="og:title" content={props.tittle} />

@@ -1,24 +1,23 @@
 import Headl from './Headl';
 import Scriptm from './Script';
 import Navbar from "./Navbar";
-import Explore from './Explore';
 import LearnMoreAboutTechnology from "./Learn_more_about_technology";
 import Newsletter from './Newsletter';
 import Banner from './Banner';
 import Footer from './Footer';
 
-function Layout({children}){
-  return(
+function Layout({ children }) {
+  return (
     <>
-      <Headl/>
-      <Navbar/>
+      <Headl />
+      <Navbar />
       {children},
-      <LearnMoreAboutTechnology/>
-      <Newsletter/>
-      <Banner/>
-      <Footer/>
-      <Scriptm/>
+      <LearnMoreAboutTechnology />
+      <Newsletter />
+      <Banner />
+      <Footer />
+      <Scriptm />
     </>
-    );
+  );
 }
 export default Layout;
