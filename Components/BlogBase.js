@@ -165,10 +165,10 @@ function BlogBase(props) {
                                     <Link passHref href="/Blog/Entrepreneurship-&-Startup" className='nav-link px-0'><h5 className='topics'>Entrepreneurship & Startup(3)</h5></Link>
                                     <Link passHref href="/Blog/Freelancing" className='nav-link px-0'><h5 className='topics'>Freelancing(2)</h5></Link>
                                     <Link passHref href="/Blog/Companies" className='nav-link px-0'><h5 className='topics'>Companies(8)</h5></Link>
-                                    <Link passHref href="/Blog/Marketing-hrefols" className='nav-link px-0'><h5 className='topics'>Marketing hrefols(3)</h5></Link>
+                                    <Link passHref href="/Blog/Marketing-hrefols" className='nav-link px-0'><h5 className='topics'>Marketing tools(3)</h5></Link>
                                     <Link passHref href="/Blog/Sports" className='nav-link px-0'><h5 className='topics'>Sports(8)</h5></Link>
-                                    <Link passHref href="/Blog/Phohrefgraphy" className='nav-link px-0'><h5 className='topics'>Phohrefgraphy(5)</h5></Link>
-                                    <Link passHref href="/Blog/Eco-hrefurism" className='nav-link px-0'><h5 className='topics'>Eco-hrefurism(2)</h5></Link>
+                                    <Link passHref href="/Blog/Photography" className='nav-link px-0'><h5 className='topics'>Photography(5)</h5></Link>
+                                    <Link passHref href="/Blog/Eco-hrefurism" className='nav-link px-0'><h5 className='topics'>Eco-tourism(2)</h5></Link>
                                     <Link passHref href="/Blog/Windsurfing" className='nav-link px-0'><h5 className='topics'>Windsurfing(6)</h5></Link>
                                     <Link passHref href="/Blog/Videography" className='nav-link px-0'><h5 className='topics'>Videography(8)</h5></Link>
                                     <Link passHref href="/Blog/Funny-Stories" className='nav-link px-0'><h5 className='topics'>Funny Stories(15)</h5></Link>
