@@ -24,12 +24,14 @@ export default function Recently_Publisheds() {
                         Recent.map((data) =>
                             <div className="col-sm-6" key={1}>
                                 <Link passHref href={`/Singleblog/${data.pathname}`} className="nav-link">
-                                    <div className="card"><img src={data.firstimage} className="card-img-top" alt={data.tittle} />
-                                        <div className="card-body">
-                                            <h5 className="card-title text-center">{data.tittle}</h5>
-                                            <p className="card-text text-dark text-center">{data.shortdescription}</p>
+                                    <a>
+                                        <div className="card"><img src={data.firstimage} className="card-img-top" alt={data.tittle} />
+                                            <div className="card-body">
+                                                <h5 className="card-title text-center">{data.tittle}</h5>
+                                                <p className="card-text text-dark text-center">{data.shortdescription}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </Link>
                             </div>
                         )

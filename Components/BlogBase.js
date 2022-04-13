@@ -144,34 +144,34 @@ function BlogBase(props) {
                             <div>
                                 <div className="py-4 px-5">
                                     <h2 className='text-dark'><b>Topics</b></h2>
-                                    <Link passHref href="/Blog/Technology" className='nav-link px-0'><h5 className='topics'>Technology(20)</h5></Link>
-                                    <Link passHref href="/Blog/Science" className='nav-link px-0'><h5 className='topics'>Science(10)</h5></Link>
-                                    <Link passHref href="/Blog/Health" className='nav-link px-0'><h5 className='topics'>Health(13)</h5></Link>
-                                    <Link passHref href="/Blog/Finance" className='nav-link px-0'><h5 className='topics'>Finance(16)</h5></Link>
-                                    <Link passHref href="/Blog/Lifestyle" className='nav-link px-0'><h5 className='topics'>LifeStyle(6)</h5></Link>
-                                    <Link passHref href="/Blog/Travel" className='nav-link px-0'><h5 className='topics'>Travel(3)</h5></Link>
-                                    <Link passHref href="/Blog/Design" className='nav-link px-0'><h5 className='topics'>Design(7)</h5></Link>
-                                    <Link passHref href="/Blog/Culture" className='nav-link px-0'><h5 className='topics'>Culture(9)</h5></Link>
-                                    <Link passHref href="/Blog/Bussiness" className='nav-link px-0'><h5 className='topics'>Bussiness(8)</h5></Link>
-                                    <Link passHref href="/Blog/Politics" className='nav-link px-0'><h5 className='topics'>Politics(2)</h5></Link>
-                                    <Link passHref href="/Blog/Opinion" className='nav-link px-0'><h5 className='topics'>Opinion(5)</h5></Link>
-                                    <Link passHref href="/Blog/World" className='nav-link px-0'><h5 className='topics'>World(2)</h5></Link>
-                                    <Link passHref href="/Blog/U.s." className='nav-link px-0'><h5 className='topics'>U.s.(2)</h5></Link>
-                                    <Link passHref href="/Blog/Social-Media" className='nav-link px-0'><h5 className='topics'>Social Medea(15)</h5></Link>
-                                    <Link passHref href="/Blog/Bloging" className='nav-link px-0'><h5 className='topics'>Bloging(9)</h5></Link>
-                                    <Link passHref href="/Blog/Digital-Marketing" className='nav-link px-0'><h5 className='topics'>Digital Marketing(11)</h5></Link>
-                                    <Link passHref href="/Blog/Money-Making" className='nav-link px-0'><h5 className='topics'>Money Making(9)</h5></Link>
-                                    <Link passHref href="/Blog/Bitcoin" className='nav-link px-0'><h5 className='topics'>Bitcoin(6)</h5></Link>
-                                    <Link passHref href="/Blog/Entrepreneurship-&-Startup" className='nav-link px-0'><h5 className='topics'>Entrepreneurship & Startup(3)</h5></Link>
-                                    <Link passHref href="/Blog/Freelancing" className='nav-link px-0'><h5 className='topics'>Freelancing(2)</h5></Link>
-                                    <Link passHref href="/Blog/Companies" className='nav-link px-0'><h5 className='topics'>Companies(8)</h5></Link>
-                                    <Link passHref href="/Blog/Marketing-tools" className='nav-link px-0'><h5 className='topics'>Marketing tools(3)</h5></Link>
-                                    <Link passHref href="/Blog/Sports" className='nav-link px-0'><h5 className='topics'>Sports(8)</h5></Link>
-                                    <Link passHref href="/Blog/Photography" className='nav-link px-0'><h5 className='topics'>Photography(5)</h5></Link>
-                                    <Link passHref href="/Blog/Eco-tourism" className='nav-link px-0'><h5 className='topics'>Eco-tourism(2)</h5></Link>
-                                    <Link passHref href="/Blog/Windsurfing" className='nav-link px-0'><h5 className='topics'>Windsurfing(6)</h5></Link>
-                                    <Link passHref href="/Blog/Videography" className='nav-link px-0'><h5 className='topics'>Videography(8)</h5></Link>
-                                    <Link passHref href="/Blog/Funny-Stories" className='nav-link px-0'><h5 className='topics'>Funny Stories(15)</h5></Link>
+                                    <Link passHref href="/Blog/Technology" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Technology(20)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Science" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Science(10)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Health" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Health(13)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Finance" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Finance(16)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Lifestyle" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>LifeStyle(6)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Travel" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Travel(3)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Design" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Design(7)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Culture" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Culture(9)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Bussiness" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Bussiness(8)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Politics" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Politics(2)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Opinion" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Opinion(5)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/World" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>World(2)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/U.s." className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>U.s.(2)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Social-Media" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Social Medea(15)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Bloging" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Bloging(9)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Digital-Marketing" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Digital Marketing(11)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Money-Making" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Money Making(9)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Bitcoin" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Bitcoin(6)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Entrepreneurship-&-Startup" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Entrepreneurship & Startup(3)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Freelancing" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Freelancing(2)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Companies" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Companies(8)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Marketing-tools" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Marketing tools(3)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Sports" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Sports(8)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Photography" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Photography(5)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Eco-tourism" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Eco-tourism(2)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Windsurfing" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className="topics">Windsurfing(6)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Videography" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Videography(8)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Funny-Stories" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Funny Stories(15)</h5></button></Link>
                                 </div>
                             </div>
                         </div>
