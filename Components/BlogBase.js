@@ -162,7 +162,7 @@ function BlogBase(props) {
                                     <Link passHref href="/Blog/Digital-Marketing" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Digital Marketing(11)</h5></button></Link><br />
                                     <Link passHref href="/Blog/Money-Making" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Money Making(9)</h5></button></Link><br />
                                     <Link passHref href="/Blog/Bitcoin" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Bitcoin(6)</h5></button></Link><br />
-                                    <Link passHref href="/Blog/Entrepreneurship-&-Startup" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Entrepreneurship & Startup(3)</h5></button></Link><br />
+                                    <Link passHref href="/Blog/Entrepreneurship-&-Startup" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Entrepreneurship(3)</h5></button></Link><br />
                                     <Link passHref href="/Blog/Freelancing" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Freelancing(2)</h5></button></Link><br />
                                     <Link passHref href="/Blog/Companies" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Companies(8)</h5></button></Link><br />
                                     <Link passHref href="/Blog/Marketing-tools" className='nav-link px-0'><button type="button" class="btn px-0"><h5 className='topics'>Marketing tools(3)</h5></button></Link><br />
