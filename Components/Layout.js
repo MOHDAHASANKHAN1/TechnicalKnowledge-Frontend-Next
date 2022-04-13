@@ -9,9 +9,10 @@ import Footer from './Footer';
 function Layout({ children }) {
   return (
     <>
-      <Headl />
+
       <Navbar />
       {children},
+      <Headl />
       <LearnMoreAboutTechnology />
       <Newsletter />
       <Banner />

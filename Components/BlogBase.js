@@ -61,7 +61,7 @@ function BlogBase(props) {
         <>
             <div className='container-fluid'>
                 <div style={{ backgroundColor: "#00f" }} className='mt-4 py-3'>
-                    <h1 className='text-center' style={{ color: "#fff" }}>Blog</h1>
+                    <h2 className='text-center' style={{ color: "#fff", fontSize: "3rem" }}>Blog</h2>
                     <h2 className='text-center' style={{ color: "red" }}>Technology Health Style Travel Culture Design Politics Science Bussiness World</h2>
                 </div>
 

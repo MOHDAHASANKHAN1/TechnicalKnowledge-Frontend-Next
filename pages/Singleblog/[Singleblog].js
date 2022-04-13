@@ -11,7 +11,7 @@ export default function SingleBlog({ Post }) {
         <>
           <Head
             tittle={Post.tittle}
-            description={Post.shortdescription + " " + Post.tittle}
+            description={Post.shortdescription}
             keywords={Post.keywords}
             imgurl={Post.firstimage}
           />

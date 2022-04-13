@@ -135,7 +135,7 @@ function Registration_form() {
                 <div id="password2Help" className="form-text text-danger"><h5>{errors.cpassword && errors.cpassword.message}</h5></div>
               </div>
               <div className="d-grid m-3">
-                <button className="btn btn-primary " type="submit"><p className="h1">SignUp</p></button>
+                <button className="btn btn-primary " type="submit"><p className="display-6"><b>SignUp</b></p></button>
               </div>
               <div className="d-grid">
                 <button className="btn alreadyanccount btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2" type="button"><p className="h3 text-dark alreadyanccount">Already Have An Account Click Here</p></button>

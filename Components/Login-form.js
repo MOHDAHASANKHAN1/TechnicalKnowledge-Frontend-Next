@@ -54,7 +54,7 @@ function Login_form() {
                   <div id="password1Help" className="form-text text-danger"><h5>{errors.password && errors.password.message}</h5></div>
                 </div>
                 <div className="d-grid m-3">
-                  <button className="btn btn-primary " type="submit"><p className="h1">Login</p></button>
+                  <button className="btn btn-primary " type="submit"><p className="display-6"><b>Login</b></p></button>
                 </div>
 
               </form>

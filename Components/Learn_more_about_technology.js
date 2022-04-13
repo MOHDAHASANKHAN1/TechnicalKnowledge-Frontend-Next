@@ -9,8 +9,8 @@ export default function Learn_more_about_technology() {
                 <div className="row g-0">
                     <div className="col-sm-12 learn">
                         <div className="bj">
-                            <h1 className='mt-3' style={{ color: "#fff" }}>You can learn on Technology.com about Technology, culture, health, style,
-                                travel, and also about programming langueges and related so on.</h1><br />
+                            <h2 className='mt-3' style={{ color: "#fff", fontSize: "2.5rem" }}>You can learn on Technology.com about Technology, culture, health, style,
+                                travel, and also about programming langueges and related so on.</h2><br />
                             <Link passHref href="/About">
                                 <button type="button"
                                     className="btn btn-warning mb-3">
