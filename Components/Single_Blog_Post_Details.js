@@ -249,7 +249,7 @@ const Blog_Post = (props) => {
         <>
           <div className="row g-0 mt-4">
             <div className="col-sm-12 right_side_info">
-              <div className=" py-3">
+              <div className="px-2 py-3">
                 <h1> <b>{/*Place Here Tittle*/}{data.tittle}</b></h1><br />
                 <div className="d-flex">
                   <h5 className="postdate d-flex"> <i className="fas fa-edit"></i><p className='date'>{data.date} By {data.writer}</p></h5>
