@@ -30,8 +30,6 @@ export default function Headm(props) {
         <meta name="author" content="Mohd Ahasan Khan" />
         <meta name="google-site-verification" content="qdtQbk2SFCSNiz3XDJw1dAD4Cy4hWXUTuFiYKh-yir0" />
         <link rel="icon" type="image/png" href="https://technicalknowledge.herokuapp.com/Icon.png"></link>
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795845100759153"
-     crossorigin="anonymous"></Script>
       </Head>
     </>
   );
