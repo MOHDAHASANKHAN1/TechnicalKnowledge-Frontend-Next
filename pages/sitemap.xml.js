@@ -45,6 +45,12 @@ export async function getServerSideProps({ res }) {
                 `
             )
             .join("")}
+            <url>
+                <loc>https://technicalknowledge.herokuapp.com/Singleblog/9-Tips-And-Tricks-To-Learn-Programming-Faster</loc>
+                <changefreq>daily</changefreq>
+            <lastmod>${new Date().toISOString()}</lastmod>
+            <priority>0.8</priority>
+            </url>
             </urlset>`
     );
     res.end();
