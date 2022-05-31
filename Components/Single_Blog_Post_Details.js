@@ -250,7 +250,7 @@ const Blog_Post = (props) => {
           <div className="row g-0 mt-4">
             <div className="col-sm-12 right_side_info">
               <div className="px-2 py-3">
-                <h1> <b>{/*Place Here Tittle*/}{data.tittle}</b></h1><br />
+                <h1>{/*Place Here Tittle*/}{data.tittle}</h1><br />
                 <div className="d-flex">
                   <h5 className="postdate d-flex"> <i className="fas fa-edit"></i><p className='date'>{data.date} By {data.writer}</p></h5>
                   <h5 className="read d-flex "> <i className="fas fa-book-open"></i> <p className='date'>5 Minute Read</p></h5>
@@ -268,10 +268,10 @@ const Blog_Post = (props) => {
                   </div>
                 </div>
                 <br />
-                <h6 className='text-center'><b>
+                <h6 className='text-center'>
                   {/*Here Place Content Which is Visible EveryWhere*/}
                   {Parser(data.shortdescription)}
-                </b></h6>
+                </h6>
                 <div className=''>
                   {/*Here Place Content 1*/}
                   {Parser(data.firstdescription)}
@@ -526,7 +526,7 @@ const Blog_Post = (props) => {
           <div className="row g-0 mt-4">
             <div className="col-sm-12 right_side_info">
               <div className="px-2 py-3">
-                <h1> <b>{/*Place Here Tittle*/}{data.tittle}</b></h1><br />
+                <h1> {/*Place Here Tittle*/}{data.tittle}</h1><br />
                 <div className="d-flex">
                   <h5 className="postdate d-flex"> <i className="fas fa-edit"></i><p className='date'>{data.date} By {data.writer}</p></h5>
                   <h5 className="read d-flex "> <i className="fas fa-book-open"></i> <p className='date'>5 Minute Read</p></h5>
@@ -535,10 +535,10 @@ const Blog_Post = (props) => {
                 <img src={data.firstimage} className="img-fluid" alt={data.tittle} />
                 <br />
                 <br />
-                <h6 className='text-center'><b>
+                <h5 className='text-center'>
                   {/*Here Place Content Which is Visible EveryWhere*/}
                   {Parser(data.shortdescription)}
-                </b></h6>
+                </h5>
                 <div className=''>
                   {/*Here Place Content 1*/}
 
