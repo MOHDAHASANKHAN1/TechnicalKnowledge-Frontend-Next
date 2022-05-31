@@ -268,10 +268,10 @@ const Blog_Post = (props) => {
                   </div>
                 </div>
                 <br />
-                <h6 className='text-center'>
+                <h5 className='text-center'>
                   {/*Here Place Content Which is Visible EveryWhere*/}
                   {Parser(data.shortdescription)}
-                </h6>
+                </h5>
                 <div className=''>
                   {/*Here Place Content 1*/}
                   {Parser(data.firstdescription)}
@@ -451,14 +451,7 @@ const Blog_Post = (props) => {
                                 placeholder="Blog First Long Descriptions"
 
                                 onChange={((e) => {
-                                  const str = e.target.value;
-                                  const arr = str.split(" ");
-                                  for (var i = 0; i < arr.length; i++) {
-                                    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-
-                                  }
-                                  const str2 = arr.join(" ");
-                                  setFirstdescription(str2);
+                                  setFirstdescription(e.target.value);
                                 })}>
                               </textarea>
                             </div>
@@ -470,14 +463,7 @@ const Blog_Post = (props) => {
                                 placeholder="Blog Second Long Description"
 
                                 onChange={((e) => {
-                                  const str = e.target.value;
-                                  const arr = str.split(" ");
-                                  for (var i = 0; i < arr.length; i++) {
-                                    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-
-                                  }
-                                  const str2 = arr.join(" ");
-                                  setSeconddescription(str2);
+                                  setSeconddescription(e.target.value);
                                 })}>
                               </textarea>
                             </div>
@@ -489,14 +475,7 @@ const Blog_Post = (props) => {
                                 placeholder="Blog Third Long Description"
 
                                 onChange={((e) => {
-                                  const str = e.target.value;
-                                  const arr = str.split(" ");
-                                  for (var i = 0; i < arr.length; i++) {
-                                    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-
-                                  }
-                                  const str2 = arr.join(" ");
-                                  setThirddescription(str2);
+                                  setThirddescription(e.target.value);
                                 })}>
                               </textarea>
                             </div>
