@@ -26,7 +26,7 @@ const Blog_Main = (props) => {
             data.map((data) =>
               <div className='row g-0 mt-4' key={1}>
                 <div className='col-sm-12' style={{ backgroundColor: "#ffffff" }}>
-                  <Link passHref href={`/Singleblog/${data.pathname}`} className='nav-link'>
+                  <Link passHref href={`/${data.pathname}`} className='nav-link'>
                     <div className='px-3 py-4'>
                       <h3 className='text-center' style={{ color: "red" }}>{data.tittle}</h3>
                       <br />

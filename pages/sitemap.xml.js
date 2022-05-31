@@ -37,7 +37,7 @@ export async function getServerSideProps({ res }) {
             .map(
                 (data) =>
                     ` <url>
-                <loc>https://technicalknowledge.herokuapp.com/Singleblog/${data.pathname}</loc>
+                <loc>https://technicalknowledge.herokuapp.com/${data.pathname}</loc>
                 <changefreq>daily</changefreq>
             <lastmod>${new Date().toISOString()}</lastmod>
             <priority>0.8</priority>

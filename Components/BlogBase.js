@@ -98,7 +98,7 @@ function BlogBase(props) {
                                     <br />
                                     {
                                         Populer.map((data) =>
-                                            <Link passHref href={`/Singleblog/${data.pathname}`} key={data._id}>
+                                            <Link passHref href={`/${data.pathname}`} key={data._id}>
                                                 <a >
                                                     <div className="boxes p-3">
                                                         <img src={data.firstimage} className="img-fluid" alt={data.tittle} />
@@ -123,7 +123,7 @@ function BlogBase(props) {
                                     <br />
                                     {
                                         Recent.map((data) =>
-                                            <Link passHref href={`/Singleblog/${data.pathname}`} key={data._id}>
+                                            <Link passHref href={`/${data.pathname}`} key={data._id}>
                                                 <a><div className="boxes p-3">
                                                     <img src={data.firstimage} className="img-fluid" alt={data.tittle} />
                                                     <div className="texts">

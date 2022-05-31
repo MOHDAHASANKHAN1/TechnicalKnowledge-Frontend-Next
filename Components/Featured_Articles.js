@@ -25,7 +25,7 @@ export default function Featured_Artcles() {
                     {
                         Featured.map((data) =>
                             <div className="col-sm-4" key={1}>
-                                <Link passHref href={`/Singleblog/${data.pathname}`} className="nav-link">
+                                <Link passHref href={`/${data.pathname}`} className="nav-link">
                                     <a>
                                         <div className="card"><img src={data.firstimage} className="card-img-top" alt={data.tittle} />
                                             <div className="card-body">
@@ -58,7 +58,7 @@ export default function Featured_Artcles() {
                             {
                                 All.map((data) =>
                                     <div className="col-sm-4" key={1}>
-                                        <Link passHref href={`/Singleblog/${data.pathname}`} className="nav-link">
+                                        <Link passHref href={`/${data.pathname}`} className="nav-link">
                                             <a>
                                                 <div className="card"><img src={data.firstimage} className="card-img-top" alt={data.tittle} />
                                                     <div className="card-body">
