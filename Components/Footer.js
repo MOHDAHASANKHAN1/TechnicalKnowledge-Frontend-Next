@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 export default function Footer() {
   const [message, setMessage] = useState('');
@@ -80,6 +81,19 @@ export default function Footer() {
           </div>
         </div>
         <hr className="dropdown-divider" />
+        <div className="bottom">
+          <div className="d-flex justify-content-around">
+            <div>
+              <span className="text-primary"><Link href="/privacy-policy">Terms And Conditions</Link></span>
+            </div>
+            <div>
+              <span className="text-primary"><Link href="/terms-and-conditions">Terms And Conditions</Link></span>
+            </div>
+            <div>
+              <span className="text-primary"><Link href="/disclaimer">Disclaimer</Link></span>
+            </div>
+          </div>
+        </div>
         <div className="bottom">
           <center><span className="credit">Created By <a href="https://wa.me/+919918423716">Ahsan Khan</a> |</span>
             <span className="far fa-copyright"></span><span>2021 All rights reserved.</span></center>

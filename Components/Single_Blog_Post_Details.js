@@ -4,6 +4,7 @@ import Parser from 'react-html-parser';
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useRouter } from 'next/router';
+import errorpage from "../pages/404";
 
 const Blog_Post = (props) => {
   const data = props.Detailes;
