@@ -2,8 +2,8 @@
 function disclaimer() {
     return (
         <>
-            <div className="container py-5 bg-white my-4">
-                <h1>Disclaimer for TechnicalKnowledge</h1>
+            <div className="container py-5 bg-white my-4" dangerouslySetInnerHTML={{
+                __html: `<h1>Disclaimer for TechnicalKnowledge</h1>
 
                 <p>If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at aimtahsankhan@gmail.com .</p>
 
@@ -21,7 +21,8 @@ function disclaimer() {
 
                 <h2>Update</h2>
 
-                <p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+                <p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>`}}>
+
             </div>
         </>
     );

@@ -2,8 +2,8 @@
 function privacy_policy() {
     return (
         <>
-            <div className="container py-5 bg-white my-4" >
-                <h1>Privacy Policy for TechnicalKnowledge</h1>
+            <div className="container py-5 bg-white my-4" dangerouslySetInnerHTML={{
+                __html: `<h1>Privacy Policy for TechnicalKnowledge</h1>
 
                 <p>At Technical knowledge, accessible from https://technicalknowledge.herokuapp.com/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Technical knowledge and how we use it.</p>
 
@@ -85,8 +85,7 @@ function privacy_policy() {
 
                 <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
 
-                <p>Technical knowledge does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
-
+                <p>Technical knowledge does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>`}}>
             </div>
         </>
     );
