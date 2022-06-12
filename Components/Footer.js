@@ -84,7 +84,7 @@ export default function Footer() {
         <div className="bottom">
           <div className="d-flex justify-content-around">
             <div>
-              <span className="text-primary"><Link href="/privacy-policy">Terms And Conditions</Link></span>
+              <span className="text-primary"><Link href="/privacy-policy">Privacy Policy</Link></span>
             </div>
             <div>
               <span className="text-primary"><Link href="/terms-and-conditions">Terms And Conditions</Link></span>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import BPSCQ from './Blog_Posts_share_comment_Question';
-import Parser from 'react-html-parser';
+// import Parser from 'react-html-parser';
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useRouter } from 'next/router';
@@ -268,28 +268,28 @@ const Searchbyid = (props) => {
                   </div>
                 </div>
                 <br />
-                <h6 className='text-center'><b>
+                <h5 className='text-center' dangerouslySetInnerHTML={{ __html: data.shortdescription }}>
                   {/*Here Place Content Which is Visible EveryWhere*/}
-                  {Parser(data.shortdescription)}
-                </b></h6>
-                <div className=''>
+                  {/* {Parser(data.shortdescription)} */}
+                </h5>
+                <div dangerouslySetInnerHTML={{ __html: data.firstdescription }}>
                   {/*Here Place Content 1*/}
-                  {Parser(data.firstdescription)}
+                  {/* {Parser(data.firstdescription)} */}
                 </div>
                 <br />
                 <img src={data.secondimage} className="img-fluid" alt={data.tittle} />
                 <br />
                 <br />
-                <div>
+                <div dangerouslySetInnerHTML={{ __html: data.seconddescription }}>
                   {/*Here Place Content 2*/}
-                  {Parser(data.seconddescription)}
+                  {/* {Parser(data.seconddescription)} */}
                 </div>
                 <img src={data.thirdimage} className="img-fluid" alt={data.tittle} />
                 <br />
                 <br />
-                <div>
+                <div dangerouslySetInnerHTML={{ __html: data.thirddescription }}>
                   {/*Here Place Content 3*/}
-                  {Parser(data.thirddescription)}
+                  {/* {Parser(data.thirddescription)} */}
                 </div>
                 <BPSCQ data={data} />
               </div>
@@ -535,29 +535,28 @@ const Searchbyid = (props) => {
                 <img src={data.firstimage} className="img-fluid" alt={data.tittle} />
                 <br />
                 <br />
-                <h6 className='text-center'><b>
+                <h5 className='text-center' dangerouslySetInnerHTML={{ __html: data.shortdescription }}>
                   {/*Here Place Content Which is Visible EveryWhere*/}
-                  {Parser(data.shortdescription)}
-                </b></h6>
-                <div className=''>
+                  {/* {Parser(data.shortdescription)} */}
+                </h5>
+                <div dangerouslySetInnerHTML={{ __html: data.firstdescription }}>
                   {/*Here Place Content 1*/}
-
-                  {Parser(data.firstdescription)}
+                  {/* {Parser(data.firstdescription)} */}
                 </div>
                 <br />
                 <img src={data.secondimage} className="img-fluid" alt={data.tittle} />
                 <br />
                 <br />
-                <div>
+                <div dangerouslySetInnerHTML={{ __html: data.seconddescription }}>
                   {/*Here Place Content 2*/}
-                  {Parser(data.seconddescription)}
+                  {/* {Parser(data.seconddescription)} */}
                 </div>
                 <img src={data.thirdimage} className="img-fluid" alt={data.tittle} />
                 <br />
                 <br />
-                <div>
+                <div dangerouslySetInnerHTML={{ __html: data.thirddescription }}>
                   {/*Here Place Content 3*/}
-                  {Parser(data.thirddescription)}
+                  {/* {Parser(data.thirddescription)} */}
                 </div>
                 <BPSCQ data={data} />
               </div>

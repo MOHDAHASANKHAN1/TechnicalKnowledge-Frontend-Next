@@ -12,16 +12,16 @@ function Layout({ children }) {
     <>
 
       <Navbar />
-      <div className="bottom bg-light">
+      <div className="bottom bg-light py-2">
         <div className="d-flex justify-content-around">
           <div>
-            <span className="text-primary"><Link href="/privacy-policy">Privacy Policy</Link></span>
+            <span className="text-primary"><b><i><u><Link href="/privacy-policy">Privacy Policy</Link></u></i></b></span>
           </div>
           <div>
-            <span className="text-primary"><Link href="/terms-and-conditions">Terms And Conditions</Link></span>
+            <span className="text-primary"><b><i><u><Link href="/terms-and-conditions">Terms And Conditions</Link></u></i></b></span>
           </div>
           <div>
-            <span className="text-primary"><Link href="/disclaimer">Disclaimer</Link></span>
+            <span className="text-primary"><b><i><u><Link href="/disclaimer">Disclaimer</Link></u></i></b></span>
           </div>
         </div>
       </div>
