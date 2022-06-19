@@ -19,8 +19,8 @@ export default function Headl() {
           href="https://www.mrvyasidea.com/wp-content/plugins/wp-image-borders/wp-image-borders.css?ver=5.7.1" media="all" />
         <link rel="stylesheet" id="wp-block-library-css"
           href="https://c0.wp.com/c/5.7.1/wp-includes/css/dist/block-library/style.min.css" media="all" />
-           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795845100759153"
-     crossorigin="anonymous"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5795845100759153"
+          crossorigin="anonymous"></script>
       </Head>
     </>
   );
