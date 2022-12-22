@@ -1,20 +1,20 @@
-import Head from '../Components/Headm';
-import Crousel from '../Components/Crousel';
-import Contact from '../Components/Contact';
-import { useState } from 'react';
-import Router from 'next/router';
-import Loader from '../Components/Loader';
+import Head from "../Components/Headm";
+import Crousel from "../Components/Crousel";
+import Contact from "../Components/Contact";
+import { useState } from "react";
+import Router from "next/router";
+import Loader from "../Components/Loader";
 
 export default function Contactus() {
   const Loding = () => {
     const [loading, setLoading] = useState(true);
 
-    Router.onRouteChangeStart = url => {
+    Router.onRouteChangeStart = (url) => {
       setLoading(false);
-    }
-    Router.onRouteChangeComplete = url => {
+    };
+    Router.onRouteChangeComplete = (url) => {
       setLoading(true);
-    }
+    };
     if (loading) {
       return (
         <>
@@ -29,7 +29,7 @@ export default function Contactus() {
         </>
       );
     }
-  }
+  };
 
   return (
     <>
@@ -40,7 +40,7 @@ export default function Contactus() {
         Email: aimtahsankhan@gmail.com
         Phone: +91-9918423716"
         keywords="Contact To Technical Knowledge Bloging | Mohd Ahasan Khan, Contact To Technical Knowledge By Mohd Ahasan Khan, Technical Knowledge By Mohd Ahasan Khan, Technical Knowledge, Technical Knowledge Bloging Website, Tips And Tricks, Tips And Tricks By Technical Knowledge, Coding By Technical Knowledge, Programming By Technical Knowledge, Technology By Technical Knowledge, Bussiness By Technical Knowledge, Culture By Technical Knowledge, Designing By Technical Knowledge, World By Technical Knowledge, Politics By Technical Knowledge, Health By Technical Knowledge, Style By Technical Knowledge, Travel By Technical Knowledge, Coding, Programming, Technology, Bussiness, Culture, Designing, World, Politics, Health, Style, Travel"
-        imgurl="https://technicalknowledge.herokuapp.com/know1.jpg"
+        imgurl="https://technicalknowledge.vercel.app/know1.jpg"
       />
       <Loding />
     </>
